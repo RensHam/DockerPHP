@@ -1,3 +1,30 @@
+# Docker setup
+
+A complete PHP docker set with all required element to develop a php application.
+
+Comes with:
+
+ - PHP 7.2
+ - Mariadb with tmpfs allowing to run intergration test at warp speed
+ - Mariadb where the data is saved over runs the development enviroment
+ - NPM instance with node, yarn, webpack allowing to process the es-6 and scss scripts
+ - Nginx as server on port 8080
+
+# Installation
+
+Install docker ce and run 
+
+```bash
+name = <PROJECT NAME>
+sudo -E docker-compose build --build-arg SSH_PRIVATE_KEY="$(< path to ssh  key)"
+```
+
+# Running 
+
+```bash
+sudo -E docker-compose up
+```
+
 ## Services exposed outside your environment ##
 
 You can access your application via **`localhost`**, if you're running the containers directly, or through **``** when run on a vm. nginx and mailhog both respond to any hostname, in case you want to add your own hostname on your `/etc/hosts` 
