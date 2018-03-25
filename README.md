@@ -12,7 +12,7 @@ Comes with:
 
 # Installation
 
-Install docker ce and run 
+Install docker ce [see](https://docs.docker.com/install/) and run 
 
 ```bash
 name = <PROJECT NAME>
