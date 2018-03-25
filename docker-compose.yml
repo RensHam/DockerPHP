@@ -25,7 +25,7 @@ services:
         - ./php-fpm/php-ini-overrides.ini:/etc/php/7.2/fpm/conf.d/99-overrides.ini
 
     memory_database:
-      image: mariadb
+      image: mariadb:latest
       environment:
         MYSQL_ROOT_PASSWORD: admin
         MYSQL_DATABASE: mysql
@@ -37,7 +37,7 @@ services:
       tmpfs: /var/lib/mysql:rw
 
     disk_database:
-      image: mariadb
+      image: mariadb:latest
       environment:
         MYSQL_ROOT_PASSWORD: admin
         MYSQL_DATABASE: mysql
