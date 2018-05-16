@@ -12,17 +12,17 @@ Comes with:
 
 # Installation
 
-Install docker ce [see](https://docs.docker.com/install/) and run 
+Install docker ce [see](https://docs.docker.com/install/) and run edit the template values.
 
 ```bash
-name = <PROJECT NAME>
-sudo -E docker-compose build --build-arg SSH_PRIVATE_KEY="$(< path to ssh  key)"
+cp template.env .env
+sudo docker-compose build --build-arg SSH_PRIVATE_KEY="$(< path to ssh  key)"
 ```
 
 # Running 
 
 ```bash
-sudo -E docker-compose up
+sudo docker-compose up
 ```
 
 ## Services exposed outside your environment ##
