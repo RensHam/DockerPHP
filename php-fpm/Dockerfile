@@ -18,3 +18,10 @@ RUN apt-get update \
     && apt-get -y install git \
     && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
 
+# Install wkhtmltopdf
+RUN apt-get update \
+    apt-get install wget \
+    && wget -O wkhtml.deb https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.xenial_amd64.deb \
+    && chmod +x wkhtml.deb \
+    && dpkg -i *.deb \ 
+    && apt-get clean; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/* wkhtml.deb
