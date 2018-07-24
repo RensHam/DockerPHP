@@ -20,7 +20,7 @@ RUN apt-get update \
 
 # Install wkhtmltopdf
 RUN apt-get update \
-    apt-get install wget xvfb libfontconfig \
+    && apt-get install wget xvfb libfontconfig \
     && wget -O wkhtml.deb https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.xenial_amd64.deb \
     && chmod +x wkhtml.deb \
     && dpkg -i *.deb \ 
